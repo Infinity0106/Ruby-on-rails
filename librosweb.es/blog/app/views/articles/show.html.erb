@@ -1,0 +1,41 @@
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
+<h2>Comments</h2>
+<%@article.comments.each do |comment|%>
+    <p>
+        <b>Commenter:</b>
+        <%=comment.commenter%>
+    </p>
+    <p>
+        <b>Comment:</b>
+        <%=comment.body%>
+    </p>
+<%= link_to'Destroy', method: :delete, data: {confirm: 'are you sure?'}%>
+<%="falta arreglas el destroy"%>
+<%end%>
+
+<h2>Add a comment</h2>
+<%= form_for ([@article, @article.comments.build]) do|f|%>
+    <p>
+        <%=f.label :commenter%>
+        <%=f.text_field :commenter%>
+    </p>
+    <p>
+        <%=f.label :body%>
+        <%=f.text_area :body%>
+    </p>
+    <p>
+        <%=f.submit%>
+    </p>
+
+<%end%>
+
+<%= link_to 'Back', articles_path%>
+<%= link_to 'Edit', edit_article_path(@article)%>

@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+body{
+    width:80%;
+    margin:10%;
+    background-image: url(la-foto.jpg);
+    background-position: fixed;
+    min-width: 454.4px;
+}
+h1{
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0 auto 9px auto;
+}
+.edit_usuario{
+    width: 80%;
+    margin: 0 auto;
+}
+#new_usuario{
+    width: 80%;
+    margin: 0 auto;
+}
+#usuario_name,#usuario_apellidoP,#usuario_apellidoM{
+    width: 195px;
+}
+#usuario_edad{
+    width: 179px;
+}
+#usuario_email{
+    width: 410px;
+}
+input{
+    margin-top: 5px;
+}
+#fondo{
+    background-color: rgba(190,190,190,.5);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    max-width: 742px;
+    margin: 0 auto;
+}
+.usuarios{
+    margin: 0 auto;
+    width: 600px;
+    //min-width: 454px;
+    //max-width: 742px;
+}
+td,th{
+    padding: 6px;
+}
+th{
+    background-color: white;
+}
+td{
+    background-color: rgba(255,255,255,.6);
+    
+}

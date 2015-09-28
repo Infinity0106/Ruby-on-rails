@@ -1,0 +1,5 @@
+rails new (nombre)
+cd (nombre)
+rails g scaffold (nombre) (atributos o los pasos)
+rake db:migrate
+rails s

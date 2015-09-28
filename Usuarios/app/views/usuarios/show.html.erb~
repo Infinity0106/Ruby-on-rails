@@ -1,0 +1,21 @@
+<table class="usuarios">
+    <tbody>
+    <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>E-mail</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+    </tr>
+    
+    <tr>
+        <td><%= "#{@usuario.name} #{@usuario.apellidoP} #{@usuario.apellidoM}" %></td>
+        <td><%= "#{@usuario.edad} años" %></td>
+        <td><%= @usuario.email %></td>
+        <td><%= link_to "Update", edit_usuario_path(@usuario)%></td>
+        <td><%= link_to "Destroy",  usuario_path(@usuario), method: :delete, data: {confirm: 'Estas seguro?'} %></td>
+    </tr>
+
+    </tbody>
+</table>
+<%= link_to 'home', usuarios_path, class: "btn btn-info" %>

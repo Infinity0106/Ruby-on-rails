@@ -1,0 +1,14 @@
+<div id=fondo>
+<h1><u><i>Formulario</i></u></h1>
+
+<%= form_for @usuario do |f| %>
+<%= f.text_field :name, placeholder: 'Nombre', :required  => '' %>
+		<%= f.text_field :apellidoP, placeholder: 'Apellido Paterno' %>
+		<%= f.text_field :apellidoM, placeholder:'Apellido Materno' %>
+		<%= f.number_field :edad, placeholder: 'Edad', :required=> '' %>
+		<%= f.email_field :email, placeholder: 'E-mail', :required => '' %>
+		<br>
+    <center><%= f.submit%></center>
+<% end %>
+<%= link_to 'home', usuarios_path, class: "btn btn-info" %>
+</div>
